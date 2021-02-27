@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+    <h:form>
+        <ui:composition template="template/lnf-template.xhtml">
+            <ui:define name="body">
+
+                <h2><h:outputLabel value="Product List"/></h2>
+                <h:dataTable value="#{productBean.listProduct}" var="p">
+                    <h:column>
+                        <f:facet name="header">Product ID</f:facet>
+                        <h:outputText value="#{p.idProduct}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Name</f:facet>
+                        <h:outputText value="#{p.nameProduct}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Price</f:facet>
+                        <h:outputText value="#{p.priceProduct}"/>
+                    </h:column>
+                </h:dataTable>
+<!--                <h3><h:outputLabel value="ENTER PRODUCT'S INFORMATION"/></h3>-->
+<!--                <table>-->
+<!--                    <tr>-->
+<!--                        <td>Product ID</td>-->
+<!--                        <td><h:inputText value="#{productBean.id}"/></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Name</td>-->
+<!--                        <td><h:inputText value="#{productBean.name}"/></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Price</td>-->
+<!--                        <td><h:inputText value="#{productBean.price}"/></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            <h:commandButton value="Submit" action="#{productBean.add}"></h:commandButton>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+            </ui:define>
+        </ui:composition>
+    </h:form>
+</h:body>
+</html>

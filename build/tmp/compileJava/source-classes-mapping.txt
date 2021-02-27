@@ -1,0 +1,6 @@
+com/demojsf/entity/Product.java
+ com.demojsf.entity.Product
+com/demojsf/service/ProductService.java
+ com.demojsf.service.ProductService
+com/demojsf/bean/ProductBean.java
+ com.demojsf.bean.ProductBean
